@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[백패커/아이디어스]프론트엔드 개발 과제</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/style2.css">
+   <!--[if lt IE 9]>
+        <script src="../../static/js/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <main>
+        <section>
+            <h1>과제 2. 입력 폼 UI</h1>
+            <form>
+                <fieldset>
+                    <legend>디폴트 상태 & 입력중 상태의 입력 폼</legend>
+                    <div class="f_module">
+                        <div class="f_module_wrap clearfix">
+                            <div class="f_txt">
+                                <textarea cols="30" rows="3" placeholder="내용을 입력하세요."
+                                    onkeyup="chk_length(this,500)"></textarea>
+                                <input type="text" id="count" class="f_count" maxlength="3" value="500" readOnly></input>
+                            </div>
+                            <button id="submit" disabled>저장</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset>
+                    <legend>비활성화</legend>
+                    <div class="f_module">
+                        <div class="f_module_wrap clearfix">
+                            <div class="f_txt f_full">
+                                <textarea cols="30" rows="3" disabled>비활성화 입력 폼 입니다.</textarea>
+                                <input type="text" id="count" class="f_count" maxlength="3" value="500" readOnly></input>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset>
+                    <legend>읽기전용</legend>
+                    <div class="f_module">
+                        <div class="f_module_wrap clearfix">
+                            <div class="f_txt f_full">
+                                <textarea rcols="30" rows="3" readonly>읽기전용 입력 폼 입니다.</textarea>
+                                <input type="text" id="count" class="f_count" maxlength="3" value="500" onfocus="this.blur();" readOnly></input>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <script src="../../static/js/placeholders.min.js"></script>
+    <script src="../../static/js/check_length.js"></script>
+</body>
+
+</html>
